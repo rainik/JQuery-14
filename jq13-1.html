@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+   <head>
+      <title>jQuery</title>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <script src = "jquery-2.1.4.js"></script> <!-- 1 ���������� JQuery -->
+   </head>
+   <body>
+      <input type="text" name="textInput" id="textInput" />
+	<div>Код последнего символа: <span id="symbolCode">d</span></div>
+      <script>
+         /*
+		  Напишите обработчик событий, который бы при вводе символов в элемент <input> выводил код последнего введенного символа в элемент <span>. */
+		  $(document).bind("keydown", function(e) { 
+			outSpan = $("#symbolCode");
+			outSpan.html(e.which);
+			}); 		 
+      </script>
+   </body>
+</html>

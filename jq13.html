@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+   <head>
+      <title>jQuery</title>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+     <script src = "jquery-2.1.4.js"></script>
+   </head>
+<body>
+      <div>Текст для манипуляций.</div>
+      <button id="bold">Жирность</button>
+      <button id="italic">Курсив</button>
+      <button id="boldItalic">Жирность + Курсив</button>
+      <button id="reset">Сброс</button>
+      <script>
+         /*1. Напишите обработчик событий, который после загрузки структуры DOM делает задний фон элемента <body> черным, а текст элемента <div> белым.
+		2. Напишите обработчик событий, который по нажатию на клавишу с идентификатором "bold" делает текст в элементе <div> жирным.
+		3. Напишите обработчик событий, который по нажатию на клавишу с идентификатором "italic" делает текст в элементе <div> курсивом.
+		4. Напишите обработчик событий, который по двойному нажатию на клавишу с идентификатором "boldItalic" вызывает ранее написанные обработчики для клавиш с идентификаторами "bold" и "italic".
+		5. Напишите обработчик событий, который по двойному нажатию на клавишу с идентификатором "reset" отменяет жирность и курсив текста в элементе <div>. */
+		$("document").ready(function() {
+			$("body").css("background-color" , "black");
+			$("div").css("color" , "white");
+		});
+/*		$("button").bind("click", function() {
+			if ( $(this).attr("id") == "bold") {
+			$("div").css("font-weight" , "bold");
+			}
+		});*/
+		
+		$("#bold").bind("click" , function () {
+			$("div").css("font-weight" , "bold");
+		});
+		$("#italic").bind("click" , function () {
+			$("div").css("font-style" , "italic");
+		});
+			
+		
+		
+
+      </script>	
+   </body>
+</html>

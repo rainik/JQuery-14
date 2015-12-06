@@ -1,0 +1,11 @@
+﻿<script src = "jquery-2.1.4.js"></script>
+<button class="langs">Кнопка №1</button>
+<button>Кнопка №2</button>
+<script>
+$("button").bind("click", function() {
+   if ($(this).hasClass("langs")) {
+      $("body").append("<ul><li>Java</li><li>C#</li></ul>");
+   }
+   alert("Обработчик события click");
+});
+</script>
